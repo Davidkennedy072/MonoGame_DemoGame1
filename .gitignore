@@ -1,0 +1,6 @@
+*
+!*/
+!*.cs
+!*.sln
+!*.csproj
+!*.gitignore

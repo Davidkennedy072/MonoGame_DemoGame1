@@ -8,8 +8,10 @@ namespace DemoGame
 {
     class GameEngine
     {
-        public const int TILE_WIDTH = 43;
-        public const int TILE_HEIGHT = 43;
+        public const int DISPLAY_TILE_WIDTH = 43;
+        public const int DISPLAY_TILE_HEIGHT = 43;
+        public const int TILE_WIDTH = 48;
+        public const int TILE_HEIGHT = 48;
 
     }
 }

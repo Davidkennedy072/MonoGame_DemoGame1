@@ -8,6 +8,8 @@ namespace DemoGame.Terrain
 {
     class Mapcell
     {
+        //Map cell class. Here we can set the properities of each tile.
+        // Properities can include collision, heal, damage, etc
         public int tileID { get; set; }
         public int collisionID { get; set; }
 

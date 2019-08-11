@@ -51,7 +51,7 @@ namespace DemoGame.Terrain
                     Texture2D texture = tileTextures[index]; // Pull texture from list. Order matters. 
                     // Change to dictionary in the future?
                     Rectangle newrectangle = new Rectangle(x * GameEngine.DISPLAY_TILE_WIDTH, y * GameEngine.DISPLAY_TILE_HEIGHT,
-                                                                    GameEngine.TILE_WIDTH, GameEngine.TILE_HEIGHT);
+                                                           GameEngine.TILE_WIDTH, GameEngine.TILE_HEIGHT);
                     // Explicitly defining rectangle location and size. Allows for scaling of spirits with varying size 
                     // Pulling variables from GameEngine.cs class. Will be used to store all variables for game
                     spriteBatch.Draw(texture, newrectangle, Color.White);

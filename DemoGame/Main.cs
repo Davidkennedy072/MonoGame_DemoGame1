@@ -14,7 +14,18 @@ namespace DemoGame
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        private List<Sprite> sprites; 
+        private List<Sprite> sprites;
+
+        List<Texture2D> TileTextures = new List<Texture2D>();
+        int[,] map = new int[,]
+        {
+            {0,0,1,0,0,0 },
+            {0,0,1,0,0,0 },
+            {0,0,0,1,0,0 },
+            {0,0,0,1,0,0 },
+            {0,0,0,1,0,0 },
+            {0,0,0,1,0,0 },
+        };
 
         public Game1()
         {
@@ -69,7 +80,9 @@ namespace DemoGame
                     }
                 }
             };
-            
+
+            TileTextures.Add(Content.Load<Texture2D>("Dirt_Block_"));
+            TileTextures.Add(Content.Load<Texture2D>("Stone_Block_"));
             // TODO: use this.Content to load your game content here
         }
 
@@ -104,10 +117,21 @@ namespace DemoGame
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             spriteBatch.Begin();
+
             foreach(var sprite in sprites)
             {
                 sprite.Draw(spriteBatch);
             }
+            for (int y = 0; y < map.GetLength(0); y++)
+            {
+                for (int x = 0; x < map.GetLength(1); x++)
+                {
+                    int index = map[y, x];
+                    Texture2D texture = TileTextures[index];
+                    spriteBatch.Draw(texture, new Rectangle(x * 43, y * 43, 48, 48), Color.White);
+                }
+            }
+
             spriteBatch.End();
 
             base.Draw(gameTime);

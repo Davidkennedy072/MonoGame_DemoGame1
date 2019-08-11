@@ -118,10 +118,6 @@ namespace DemoGame
 
             spriteBatch.Begin();
 
-            foreach(var sprite in sprites)
-            {
-                sprite.Draw(spriteBatch);
-            }
             for (int y = 0; y < map.GetLength(0); y++)
             {
                 for (int x = 0; x < map.GetLength(1); x++)
@@ -132,6 +128,10 @@ namespace DemoGame
                 }
             }
 
+            foreach (var sprite in sprites)
+            {
+                sprite.Draw(spriteBatch);
+            }
             spriteBatch.End();
 
             base.Draw(gameTime);

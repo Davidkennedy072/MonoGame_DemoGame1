@@ -1,0 +1,18 @@
+Game Ideas:
+Have monsters ranked into Tiers
+Brave frontier has 8 tiers and lots of monsters (1800+1600) 
+so lets use Brave frontier monsters as sprites for enemies and characters
+The nice thing about brave frontier is the spirites can upgrade and change tiers. 
+
+I checked out monster warlord and some of the sprities are useable. 
+
+Using pokemon soft/friendly looking spirits for tiers below brave frontier spirites is a good idea. 
+
+I am still not 100% sure about absorbing combat 
+(when player and enemy collide a calculation for the amount of each enemy absorbed 
+and the maximum increased is completed). 
+eg: 
+When a player attacks an enemy with higher wind, 
+the player looses elemental energy but maximum increases
+
+Crowns modify and allow more elements, life leech, healing per second, etc. 

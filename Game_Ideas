@@ -18,4 +18,7 @@ the player looses elemental energy but maximum increases
 Crowns modify and allow more elements, life leech, healing per second, etc. 
 
 I want to add tile effects as well. Being on tiles will give players buffs and debuffs.
-eg: being on sand decreases water and earth strength but increaes wind. 
+eg: being on sand decreases water and earth strength but increaes wind.
+
+http://www.jgallant.com/procedurally-generating-wrapping-world-maps-in-unity-csharp-part-1/
+Link to some good ideas

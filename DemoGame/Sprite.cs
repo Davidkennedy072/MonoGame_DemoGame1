@@ -11,16 +11,9 @@ namespace DemoGame
 {
     public class Sprite
     {
-        private Texture2D texture;
+        protected Texture2D texture;
         private Vector2 position;
-        public Input Input; 
         public float speed = 1f;
-
-        public Sprite(Texture2D texture)
-            // Constructor with only Texture
-        {
-            this.texture = texture;
-        }
 
         public Sprite(Texture2D texture, Vector2 position)
             // Constructor with Texture and Position
@@ -29,32 +22,9 @@ namespace DemoGame
             this.position = position;
         }
 
-        private void Move()
-        {
-            if (Input == null)
-            {
-                return;
-            }
+        private abstract void Move(); 
 
-            if (Keyboard.GetState().IsKeyDown(Input.Left))
-            {
-                position.X -= this.speed;
-            }
-            if (Keyboard.GetState().IsKeyDown(Input.Right))
-            {
-                position.X += this.speed;
-            }
-            if (Keyboard.GetState().IsKeyDown(Input.Up))
-            {
-                position.Y -= this.speed;
-            }
-            if (Keyboard.GetState().IsKeyDown(Input.Down))
-            {
-                position.Y += this.speed;
-            }
-        }
-
-        public void Update()
+        public virtual void Update()
         {
             this.Move();
         }
@@ -66,4 +36,5 @@ namespace DemoGame
             spriteBatch.Draw(this.texture, this.position, Color.White);
         }
     }
+    
 }

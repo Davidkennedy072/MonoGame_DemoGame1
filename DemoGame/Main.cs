@@ -15,7 +15,11 @@ namespace DemoGame
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        public static int ScreenHeight;
+        public static int ScreenWidth;
+
         private List<Sprite> sprites;
+        private Camera _camera;
 
         TileLayer layer = new TileLayer(
             new int[,]{
@@ -46,7 +50,8 @@ namespace DemoGame
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            ScreenHeight = graphics.PreferredBackBufferHeight;
+            ScreenWidth = graphics.PreferredBackBufferWidth;
             base.Initialize();
         }
 
@@ -60,6 +65,8 @@ namespace DemoGame
             spriteBatch = new SpriteBatch(GraphicsDevice);
             //var texture = Content.Load<Texture2D>("Victide_Enchantment");
             var texture = Content.Load<Texture2D>("Unit_ills_anime_10011");
+
+            _camera = new Camera();
 
             sprites = new List<Sprite>()
             {
@@ -106,10 +113,15 @@ namespace DemoGame
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            if(Keyboard.GetState().isKeyDown(Keys.Escape))
+            {
+                this.Exit()
+            }
             foreach(var sprite in sprites)
             {
                 sprite.Update();
             }
+            _camera.Follow(sprites[0])
         }
 
         /// <summary>
@@ -120,7 +132,7 @@ namespace DemoGame
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            spriteBatch.Begin();
+            spriteBatch.Begin(transformMatrix:_camera.Transform);
 
             layer.Draw(spriteBatch);
 

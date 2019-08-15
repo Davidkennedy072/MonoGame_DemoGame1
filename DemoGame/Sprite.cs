@@ -36,39 +36,5 @@ namespace DemoGame
             spriteBatch.Draw(this.texture, this.position, Color.White);
         }
     }
-
-    class Player : Sprite
-    {
-        public Input Input; 
-
-        public Player(Texture2D texture, Vector2 position)
-        {
-            base(Texture2D texture, Vector2 position)
-        }
-
-        private override void Move()
-        {
-            if (Input == null)
-            {
-                return;
-            }
-
-            if (Keyboard.GetState().IsKeyDown(Input.Left))
-            {
-                position.X -= this.speed;
-            }
-            if (Keyboard.GetState().IsKeyDown(Input.Right))
-            {
-                position.X += this.speed;
-            }
-            if (Keyboard.GetState().IsKeyDown(Input.Up))
-            {
-                position.Y -= this.speed;
-            }
-            if (Keyboard.GetState().IsKeyDown(Input.Down))
-            {
-                position.Y += this.speed;
-            }
-        }
-    }
+    
 }

@@ -58,7 +58,8 @@ namespace DemoGame
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            var texture = Content.Load<Texture2D>("Victide_Enchantment");
+            //var texture = Content.Load<Texture2D>("Victide_Enchantment");
+            var texture = Content.Load<Texture2D>("Unit_ills_anime_10011");
 
             sprites = new List<Sprite>()
             {

@@ -41,6 +41,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Camera.cs" />
     <Compile Include="GameEngine.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Input.cs" />

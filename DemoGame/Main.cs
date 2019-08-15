@@ -113,15 +113,15 @@ namespace DemoGame
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            if(Keyboard.GetState().isKeyDown(Keys.Escape))
+            if(Keyboard.GetState().IsKeyDown(Keys.Escape))
             {
-                this.Exit()
+                this.Exit();
             }
             foreach(var sprite in sprites)
             {
                 sprite.Update();
             }
-            _camera.Follow(sprites[0])
+            _camera.Follow(sprites[0]);
         }
 
         /// <summary>

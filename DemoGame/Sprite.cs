@@ -12,9 +12,17 @@ namespace DemoGame
     public class Sprite
     {
         private Texture2D texture;
-        private Vector2 position;
+        public Vector2 position;
         public Input Input; 
         public float speed = 1f;
+
+        public Rectangle rectangle
+        {
+            get {
+                return new Rectangle((int)position.X,
+              (int)position.Y, texture.Width, texture.Height);
+            }
+        }
 
         public Sprite(Texture2D texture)
             // Constructor with only Texture

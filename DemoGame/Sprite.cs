@@ -11,16 +11,9 @@ namespace DemoGame
 {
     public class Sprite
     {
-        private Texture2D texture;
+        protected Texture2D texture;
         private Vector2 position;
-        public Input Input; 
         public float speed = 1f;
-
-        public Sprite(Texture2D texture)
-            // Constructor with only Texture
-        {
-            this.texture = texture;
-        }
 
         public Sprite(Texture2D texture, Vector2 position)
             // Constructor with Texture and Position
@@ -29,7 +22,31 @@ namespace DemoGame
             this.position = position;
         }
 
-        private void Move()
+        private abstract void Move(); 
+
+        public virtual void Update()
+        {
+            this.Move();
+        }
+
+        public void Draw(SpriteBatch spriteBatch)
+            // Passing SpriteBatch object from Game1.cs
+            //SpriteBatch object is used for drawing
+        {
+            spriteBatch.Draw(this.texture, this.position, Color.White);
+        }
+    }
+
+    class Player : Sprite
+    {
+        public Input Input; 
+
+        public Player(Texture2D texture, Vector2 position)
+        {
+            base(Texture2D texture, Vector2 position)
+        }
+
+        private override void Move()
         {
             if (Input == null)
             {
@@ -52,18 +69,6 @@ namespace DemoGame
             {
                 position.Y += this.speed;
             }
-        }
-
-        public void Update()
-        {
-            this.Move();
-        }
-
-        public void Draw(SpriteBatch spriteBatch)
-            // Passing SpriteBatch object from Game1.cs
-            //SpriteBatch object is used for drawing
-        {
-            spriteBatch.Draw(this.texture, this.position, Color.White);
         }
     }
 }

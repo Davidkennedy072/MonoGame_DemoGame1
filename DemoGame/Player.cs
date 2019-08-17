@@ -14,10 +14,9 @@ namespace DemoGame
     {
         public Input Input;
 
-        public Player(Texture2D texture, Vector2 position)
+        public Player(Texture2D texture, Vector2 position) : base(texture, position)
         {
-            this.texture = texture;
-            this.position = position;
+
         }
 
         public override void Move()

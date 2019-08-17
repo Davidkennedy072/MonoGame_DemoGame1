@@ -23,7 +23,12 @@ namespace DemoGame
             }
         }
 
-     
+        public Sprite(Texture2D texture, Vector2 position)
+        // Constructor with Texture and Position
+        {
+            this.texture = texture;
+            this.position = position;
+        }
 
         public virtual void Move()
         {

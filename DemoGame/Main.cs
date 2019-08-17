@@ -70,7 +70,7 @@ namespace DemoGame
 
             sprites = new List<Sprite>()
             {
-                new Sprite(texture, new Vector2(100, 100))
+                new Player(texture, new Vector2(100, 100))
                 {
                     Input = new Input()
                     {
@@ -80,7 +80,7 @@ namespace DemoGame
                         Right = Keys.D
                     }
                 },
-                new Sprite(texture, new Vector2(200,200))
+                new Player(texture, new Vector2(200,200))
                 {
                     speed = 3f,
                     Input = new Input()

@@ -44,7 +44,8 @@ namespace DemoGame
             // Passing SpriteBatch object from Game1.cs
             //SpriteBatch object is used for drawing
         {
-            spriteBatch.Draw(this.texture, this.position, Color.White);
+            //spriteBatch.Draw(this.texture, this.position, Color.White);
+            spriteBatch.Draw(this.texture, this.rectangle, Color.White);
         }
     }
     

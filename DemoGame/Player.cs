@@ -28,19 +28,19 @@ namespace DemoGame
 
             if (Keyboard.GetState().IsKeyDown(Input.Left))
             {
-                position.X -= this.speed;
+                position.X -= this.stats.speed;
             }
             if (Keyboard.GetState().IsKeyDown(Input.Right))
             {
-                position.X += this.speed;
+                position.X += this.stats.speed;
             }
             if (Keyboard.GetState().IsKeyDown(Input.Up))
             {
-                position.Y -= this.speed;
+                position.Y -= this.stats.speed;
             }
             if (Keyboard.GetState().IsKeyDown(Input.Down))
             {
-                position.Y += this.speed;
+                position.Y += this.stats.speed;
             }
         }
     }

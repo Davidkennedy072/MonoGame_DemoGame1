@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DemoGame.Stats;
 
 namespace DemoGame
 {
@@ -13,7 +14,8 @@ namespace DemoGame
     {
         protected Texture2D texture;
         public Vector2 position;
-        public float speed = 1f;
+
+        public StatsManager stats;
 
         public Rectangle rectangle
         {
@@ -30,6 +32,11 @@ namespace DemoGame
             this.position = position;
         }
 
+        public virtual void Initialize()
+        {
+            this.stats = new StatsManager();
+        }
+
         public virtual void Move()
         {
 
@@ -44,7 +51,6 @@ namespace DemoGame
             // Passing SpriteBatch object from Game1.cs
             //SpriteBatch object is used for drawing
         {
-            //spriteBatch.Draw(this.texture, this.position, Color.White);
             spriteBatch.Draw(this.texture, this.rectangle, Color.White);
         }
     }

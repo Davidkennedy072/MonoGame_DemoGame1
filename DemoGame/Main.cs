@@ -78,11 +78,12 @@ namespace DemoGame
                         Down = Keys.S,
                         Left = Keys.A,
                         Right = Keys.D
-                    }
+                    },
+                    stats = new Stats.StatsManager()
                 },
                 new Player(texture, new Vector2(200,200))
                 {
-                    speed = 3f,
+                    stats = new Stats.StatsManager(){ speed = 3f},
                     Input = new Input()
                     {
                         Up = Keys.Up,

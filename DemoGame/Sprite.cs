@@ -24,6 +24,14 @@ namespace DemoGame
               (int)position.Y, texture.Width, texture.Height);
             }
         }
+        public Rectangle entity_rectangle
+        {
+            get
+            {
+                return new Rectangle((int)position.X,
+                    (int)position.Y, (int)this.stats.entity_radius, (int)this.stats.entity_radius);
+            }
+        }
 
         public Sprite(Texture2D texture, Vector2 position)
         // Constructor with Texture and Position

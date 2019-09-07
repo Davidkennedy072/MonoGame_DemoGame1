@@ -22,3 +22,9 @@ eg: being on sand decreases water and earth strength but increaes wind.
 
 http://www.jgallant.com/procedurally-generating-wrapping-world-maps-in-unity-csharp-part-1/
 Link to some good ideas
+
+
+Game Idea:
+Player and enemies have a square around them. I want this square area to be heighlighted (maybe shaded). This square defines interactions area. if enemies are inside this circle all interactions begin. This area gets bigger 
+
+I want orbital minions as well. Minions are similar to the player and move (surround the player)

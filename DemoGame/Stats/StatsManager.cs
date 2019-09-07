@@ -10,6 +10,9 @@ namespace DemoGame.Stats
     {
         public float health { get; set; }
         public float speed {get; set; }
+        public float entity_radius { get; set; }
+        // entity_radius is the area (hitbox) of the player where the player can attack
+        //if player is in enemy entity_radius damage starts
 
         public StatsManager()
         {

@@ -17,6 +17,10 @@ the player looses elemental energy but maximum increases
 
 Crowns modify and allow more elements, life leech, healing per second, etc. 
 
+Elements can combine into 'higher' elements that have special effects and have a stronger weighting factor when it comes to damages.
+Idea is player can combine one point of earth and one point of fire to create one point of magma. This takes both current and maximum point.
+
+Crowns can unlock higher elements etc. Each species will have affinity for elements.
 I want to add tile effects as well. Being on tiles will give players buffs and debuffs.
 eg: being on sand decreases water and earth strength but increaes wind.
 
